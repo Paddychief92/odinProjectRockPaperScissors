@@ -4,7 +4,6 @@ function getComputerChoice() {
     return choice[randNum];
 };
 
-const playerSelection = "rock";
 
 function playRound(playerSelection, computerSelection) {
     let outcome = "invalid choice";
@@ -29,6 +28,7 @@ function playRound(playerSelection, computerSelection) {
     let result = [];
 
     for (let i = 0; i < 5; i++) {
+      const playerSelection = prompt("pick rock, paper, or scissors");
       const computerSelection = getComputerChoice();
       result[i] = playRound(playerSelection, computerSelection);
       console.log(result[i]);
