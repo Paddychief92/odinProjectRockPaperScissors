@@ -5,6 +5,7 @@ function getComputerChoice() {
 };
 
 const playerSelection = "rock";
+const computerSelection = getComputerChoice();
 
 function playRound(playerSelection, computerSelection) {
     let outcome = "invalid choice";
@@ -26,25 +27,11 @@ function playRound(playerSelection, computerSelection) {
    function game() {
     let playerScore = 0;
     let computerScore = 0;
-    let result = [];
+    let winner;
 
     for (let i = 0; i < 5; i++) {
-      const computerSelection = getComputerChoice();
-      result[i] = playRound(playerSelection, computerSelection);
-      console.log(result[i]);
+      result = playRound(playerSelection, computerSelection);
+      console.log(result);
+    }}
 
-     if (result[i].includes("win")) {
-      playerScore++;
-    } else if (result[i].includes("lose")) {
-      computerScore++;
-    }};
-
-    if (playerScore > computerScore) {
-      return "you win the game";
-    } else if (playerScore < computerScore) {
-      return "computer wins the game";
-    } else {
-      return "it is a draw";
-    } 
-   };
-console.log(game())
+console.log(game());
