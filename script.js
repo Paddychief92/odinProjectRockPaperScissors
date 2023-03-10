@@ -5,13 +5,11 @@ const interface = document.getElementsByClassName("interface");
 const buttons = document.getElementsByClassName("buttons");
 const output = document.getElementsByClassName("output");
 
-
 function getComputerChoice() {
     let choice = ["Rock", "Paper", "Scissors"];
     randNum = Math.floor((Math.random() * 3));
     return choice[randNum];
 };
-
 
 function playRound(playerSelection, computerSelection) {
     let outcome = "invalid choice";
@@ -28,29 +26,27 @@ function playRound(playerSelection, computerSelection) {
             } else { outcome = "lose"}}
     
             return `you ${outcome} you picked ${p1} the computer picked ${p2}`;
-        }
+        };
 
    function game() {
     let playerScore = 0;
     let computerScore = 0;
     let result = [];
 
-    
-      const playerSelection = prompt("pick rock, paper, or scissors");
-      const computerSelection = getComputerChoice();
-      result = playRound(playerSelection, computerSelection);
-      console.log(result);
+    const playerSelection = prompt("pick rock, paper, or scissors");
+    const computerSelection = getComputerChoice();
+    result = playRound(playerSelection, computerSelection);      console.log(result);
 
-     if (result[i].includes("win")) {
-      playerScore++;
-    } else if (result[i].includes("lose")) {
-      computerScore++;
-    }};
+      if (result.includes("win")) {
+        playerScore++;
+      } else if (result.includes("lose")) {
+        computerScore++;
+      }};
 
-    if (playerScore > computerScore) {
-      return "you win the game";
-    } else if (playerScore < computerScore) {
-      return "computer wins the game";
-    } else {
-      return "it is a draw";
+      if (playerScore > computerScore) {
+        return "you win the game";
+      } else if (playerScore < computerScore) {
+        return "computer wins the game";
+      } else {
+        return "it is a draw";
     };
