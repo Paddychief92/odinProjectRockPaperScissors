@@ -5,9 +5,10 @@ const interface = document.getElementsByClassName("interface");
 const buttons = document.getElementsByClassName("buttons");
 const output = document.getElementsByClassName("output");
 
-rock.addEventListener("click", game("rock"));
-paper.addEventListener("click", game("paper"));
-scissors.addEventListener("click", game("Scissors"));
+rock.addEventListener("click", () => game("rock"));
+paper.addEventListener("click", () => game("paper"));
+scissors.addEventListener("click", () => game("scissors"));
+
 
 function getComputerChoice() {
     let choice = ["Rock", "Paper", "Scissors"];
@@ -55,3 +56,5 @@ function playRound(playerSelection, computerSelection) {
       } else {
         return "it is a draw"; */
     };
+
+    console.log(game());
