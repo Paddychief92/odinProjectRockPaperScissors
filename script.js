@@ -5,6 +5,10 @@ const interface = document.getElementsByClassName("interface");
 const buttons = document.getElementsByClassName("buttons");
 const output = document.getElementsByClassName("output");
 
+rock.addEventListener("click", game("rock"));
+paper.addEventListener("click", game("paper"));
+scissors.addEventListener("click", game("Scissors"));
+
 function getComputerChoice() {
     let choice = ["Rock", "Paper", "Scissors"];
     randNum = Math.floor((Math.random() * 3));
@@ -28,25 +32,26 @@ function playRound(playerSelection, computerSelection) {
             return `you ${outcome} you picked ${p1} the computer picked ${p2}`;
         };
 
-   function game() {
+   function game(playerChoice) {
     let playerScore = 0;
     let computerScore = 0;
     let result = [];
 
-    const playerSelection = prompt("pick rock, paper, or scissors");
+    const playerSelection = playerChoice;
     const computerSelection = getComputerChoice();
-    result = playRound(playerSelection, computerSelection);      console.log(result);
+    result = playRound(playerSelection, computerSelection);      
+    return result;
 
-      if (result.includes("win")) {
+     /*  if (result.includes("win")) {
         playerScore++;
       } else if (result.includes("lose")) {
         computerScore++;
-      }};
+      }}; */
 
-      if (playerScore > computerScore) {
+     /*  if (playerScore > computerScore) {
         return "you win the game";
       } else if (playerScore < computerScore) {
         return "computer wins the game";
       } else {
-        return "it is a draw";
+        return "it is a draw"; */
     };
