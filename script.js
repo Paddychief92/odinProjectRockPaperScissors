@@ -1,3 +1,11 @@
+const rock = document.getElementById("rock");
+const paper = document.getElementById("paper");
+const scissors = document.getElementById("scissors");
+const interface = document.getElementsByClassName("interface");
+const buttons = document.getElementsByClassName("buttons");
+const output = document.getElementsByClassName("output");
+
+
 function getComputerChoice() {
     let choice = ["Rock", "Paper", "Scissors"];
     randNum = Math.floor((Math.random() * 3));
