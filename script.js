@@ -27,11 +27,11 @@ function playRound(playerSelection, computerSelection) {
     let computerScore = 0;
     let result = [];
 
-    for (let i = 0; i < 5; i++) {
+    
       const playerSelection = prompt("pick rock, paper, or scissors");
       const computerSelection = getComputerChoice();
-      result[i] = playRound(playerSelection, computerSelection);
-      console.log(result[i]);
+      result = playRound(playerSelection, computerSelection);
+      console.log(result);
 
      if (result[i].includes("win")) {
       playerScore++;
@@ -45,6 +45,4 @@ function playRound(playerSelection, computerSelection) {
       return "computer wins the game";
     } else {
       return "it is a draw";
-    } 
-   };
-console.log(game())
+    };
