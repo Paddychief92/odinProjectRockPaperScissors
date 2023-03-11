@@ -4,12 +4,20 @@ const scissors = document.getElementById("scissors");
 const interface = document.getElementsByClassName("interface");
 const buttons = document.getElementsByClassName("buttons");
 const output = document.getElementsByClassName("output");
+const round = document.getElementById("round");
 
-rock.addEventListener("click", () => console.log(playRound("rock", getComputerChoice())));
-paper.addEventListener("click", () => console.log("you clicked paper"));
-scissors.addEventListener("click", () => console.log("you clicked scissors"));
-
-
+rock.addEventListener("click", () => {
+  let rockResult = playRound("rock", getComputerChoice());
+  round.innerText = rockResult;
+});
+paper.addEventListener("click", () => {
+  let paperResult = playRound("paper", getComputerChoice());
+  round.innerText = paperResult;
+});
+scissors.addEventListener("click", () => {
+  let scissorResult = playRound("scissors", getComputerChoice());
+  round.innerText = scissorResult;
+});
 
 function getComputerChoice() {
     let choice = ["Rock", "Paper", "Scissors"];
