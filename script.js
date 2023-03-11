@@ -5,9 +5,10 @@ const interface = document.getElementsByClassName("interface");
 const buttons = document.getElementsByClassName("buttons");
 const output = document.getElementsByClassName("output");
 
-rock.addEventListener("click", () => game("rock"));
-paper.addEventListener("click", () => game("paper"));
-scissors.addEventListener("click", () => game("scissors"));
+rock.addEventListener("click", () => console.log(playRound("rock", getComputerChoice())));
+paper.addEventListener("click", () => console.log("you clicked paper"));
+scissors.addEventListener("click", () => console.log("you clicked scissors"));
+
 
 
 function getComputerChoice() {
@@ -33,7 +34,7 @@ function playRound(playerSelection, computerSelection) {
             return `you ${outcome} you picked ${p1} the computer picked ${p2}`;
         };
 
-   function game(playerChoice) {
+   /* function game(playerChoice) {
     let playerScore = 0;
     let computerScore = 0;
     let result = [];
@@ -55,6 +56,3 @@ function playRound(playerSelection, computerSelection) {
         return "computer wins the game";
       } else {
         return "it is a draw"; */
-    };
-
-    console.log(game());
