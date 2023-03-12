@@ -1,14 +1,17 @@
 const rock = document.getElementById("rock");
 const paper = document.getElementById("paper");
 const scissors = document.getElementById("scissors");
-const interface = document.getElementsByClassName("interface");
-const buttons = document.getElementsByClassName("buttons");
-const output = document.getElementsByClassName("output");
 const round = document.getElementById("round");
+const scores = document.getElementById("scores");
+let playerScore = 0;
+let computerScore = 0;
 
 rock.addEventListener("click", () => {
   let rockResult = playRound("rock", getComputerChoice());
   round.innerText = rockResult;
+  let rockScore = incScore(rockResult);
+  scores.innerText = rockScore;
+
 });
 paper.addEventListener("click", () => {
   let paperResult = playRound("paper", getComputerChoice());
@@ -29,6 +32,7 @@ function playRound(playerSelection, computerSelection) {
     let outcome = "invalid choice";
     let p1 = playerSelection.toLowerCase();
     let p2 = computerSelection.toLowerCase();
+    
 
     if (p1 === p2) {
         outcome = "tied";
@@ -42,25 +46,31 @@ function playRound(playerSelection, computerSelection) {
             return `you ${outcome} you picked ${p1} the computer picked ${p2}`;
         };
 
-   /* function game(playerChoice) {
-    let playerScore = 0;
-    let computerScore = 0;
-    let result = [];
+        function incScore(result) {
+          
+          if (result.includes("win")) {
+            playerScore++;
+          } else if (result.includes("lose")) {
+            computerScore++;
+          } else {
 
-    const playerSelection = playerChoice;
-    const computerSelection = getComputerChoice();
-    result = playRound(playerSelection, computerSelection);      
-    return result;
+          }
+          return `Scores: ${playerScore} : ${computerScore}`;
+        };
 
-     /*  if (result.includes("win")) {
-        playerScore++;
-      } else if (result.includes("lose")) {
-        computerScore++;
-      }}; */
 
-     /*  if (playerScore > computerScore) {
+   function game() {
+    
+
+     
+
+      if (playerScore > computerScore) {
         return "you win the game";
       } else if (playerScore < computerScore) {
         return "computer wins the game";
       } else {
-        return "it is a draw"; */
+        return "it is a draw"};
+      };
+
+        
+        
