@@ -1,0 +1,91 @@
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: #F5F8FA;
+  }
+
+  .ctr {
+    
+    justify-content: space-around;
+    align-items: center;
+
+  }
+  
+  .interface {
+    
+    width: 500px;
+    margin: 0 auto;
+    background-color: #FFF;
+    border: 1px solid #E6ECF0;
+    padding: 20px;
+  }
+  
+  .title {
+    text-align: center;
+  }
+  
+  .title h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #1DA1F2;
+  }
+  
+  .title h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1DA1F2;
+  }
+  
+  .title h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #1DA1F2;
+  }
+  
+  #buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  #buttons button {
+    font-size: 24px;
+    font-weight: bold;
+    color: #FFF;
+    background-color: #1DA1F2;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #buttons button:hover {
+    background-color: #0E71A8;
+  }
+  
+  .output {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .output p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #1C1E21;
+  }
+  
+  #round {
+    font-weight: bold;
+  }
+  
+  #scores {
+    font-weight: bold;
+  }
+  
+  #finalResult {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1DA1F2;
+  }
+  
